@@ -365,9 +365,6 @@
     font-weight: bold;
     font-style: normal;
 }
-html {
-    scroll-behavior: smooth;
-}
 body {
     font-family: 'Helvetica', sans-serif;
 }
@@ -408,10 +405,12 @@ header nav{
 
 nav .burger {
     display: none;
-    width: 50px;
-    height: 40px;
+    width: 40px;
+    height: 30px;
     position: relative;
+    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     cursor: pointer;
     z-index: 4;
 }
@@ -423,7 +422,6 @@ nav .burger {
 }
 
 nav .burger > span {
-    position: absolute;
     display: block;
     width: 100%;
     height: 2px;
@@ -432,7 +430,6 @@ nav .burger > span {
 }
 
 nav .burger .topLine {
-    top: 0;
 }
 nav .burger .topLine:before,
 nav .burger .topLine:after,
@@ -441,7 +438,7 @@ nav .burger .bottomLine:after {
     content: '';
     position: absolute;
     width: 50%;
-    height: 100%;
+    height: 2px;
     background-color: #fff;
     transition: transform 0.6s, left 0.7s, right 0.7s;
 }
@@ -462,16 +459,12 @@ nav .burger .bottomLine:after {
     transform-origin: 100%;
 }
 nav .burger .middleLine {
-    top: 50%;
     height: 2px;
     background-color: #fff;
     transition: 0.3s ease;
-    transform: translateY(-50%);
 }
 
 nav .burger .bottomLine {
-    bottom: 0;
-    transform: translateY(-100%);
 }
 
 nav .burger.opened .topLine:before {
@@ -501,7 +494,9 @@ nav .burger.opened .middleLine {
 
 
 
-
+.background{
+    pointer-events: none;
+}
 header nav .logo{
     display: flex;
     flex-direction: column;
@@ -579,16 +574,23 @@ main .first-view{
     box-shadow: inset 0px -378px 67px -200px rgba(0,0,0,1);
     /*box-shadow: inset 0px -350px 67px -200px rgba(0,0,0,1), inset 0px 350px 67px -200px rgba(0,0,0,1);*/
     height: 100vh;
-    background: url(./../../images/IMG_8821.webp) -17px -140px no-repeat;
-    background-size: 110%;
+    background: url(./../../images/IMG_8821.webp) 0 -140px no-repeat;
+    background-size: 100%;
     /*background-position: center center;*/
+}
+main .first-view .background{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: brightness(70%);
 }
 main .first-view .first-view-container{
     position: relative;
     z-index: 3;
     padding-top: 120px;
     padding-bottom: 50px;
-    height: 100vh;
+    height: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -618,8 +620,10 @@ main .first-view .first-view-container .about h2{
 }
 main .first-view .first-view-container .about .description p span{
     display: block;
-    margin-top: 14px;
+    margin-top: 10px;
     color: yellow;
+    text-transform: uppercase;
+    font-size: 20px;
 }
 main .first-view .first-view-container .about p{
     display: block;
@@ -668,30 +672,32 @@ main .first-view .first-view-container .start a{
 
 
 section.window{
-    height: 100vh;
+    min-height: 90vh;
     position: relative;
-    top: -110px;
+    /*top: -110px;*/
 }
 section.window .background{
     position: absolute;
     width: 100%;
     height: 100%;
     pointer-events: none;
+    backdrop-filter: brightness(70%);
+
 }
 section.window .background::after {
     content: "";
     position: absolute;
     inset: 0; /* Заповнює весь батьківський елемент */
-    -webkit-box-shadow: inset 0px -390px 67px -160px rgba(0,0,0,1), inset 0px 350px 67px -160px rgba(0,0,0,1);
-    -moz-box-shadow: inset 0px -390px 67px -160px rgba(0,0,0,1), inset 0px 350px 67px -160px rgba(0,0,0,1);
-    box-shadow: inset 0px -390px 67px -160px rgba(0,0,0,1), inset 0px 350px 67px -160px rgba(0,0,0,1);
+    -webkit-box-shadow: inset 0px -320px 67px -160px rgba(0,0,0,1), inset 0px 210px 67px -160px rgba(0,0,0,1);
+    -moz-box-shadow: inset 0px -320px 67px -160px rgba(0,0,0,1), inset 0px 210px 67px -160px rgba(0,0,0,1);
+    box-shadow: inset 0px -320px 67px -160px rgba(0,0,0,1), inset 0px 210px 67px -160px rgba(0,0,0,1);
     z-index: 1;
 }
 
 section.window.about{
 }
 section.window.about.about-me{
-    background: url(./../../images/IMG_8822.webp) -65px -240px no-repeat;
+    background: url(./../../images/IMG_8822.webp) -65px -350px no-repeat;
     background-size: 115%;
 }
 section.window .content{
@@ -705,6 +711,12 @@ section.window .container{
 }
 section.window.about-me .container{
     justify-content: flex-end;
+}
+section.window.about-me .text_content {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 section.window.about-me .text_content h3.section-title {
     font-size: 45px;
@@ -728,7 +740,9 @@ section.window.about-me .text_content .description{
     line-height: 1.5;
 }
 
-
+section.window .container{
+    min-height: 80vh;
+}
 section.window.overview .background::after{
     -webkit-box-shadow: inset 0px -390px 122px -218px rgba(0,0,0,1), inset 0px 350px 122px -218px rgba(0,0,0,1);
     -moz-box-shadow: inset 0px -390px 122px -218px rgba(0,0,0,1), inset 0px 350px 122px -218px rgba(0,0,0,1);
@@ -741,6 +755,7 @@ section.window.overview .background .skulls{
     height: 100%;
     width: 100%;
     background-color: #000;
+    filter: brightness(70%);
 }
 section.window.overview .background .skulls span{
     display: block;
@@ -776,6 +791,10 @@ section.window.overview .text_content ul{
     gap: 13px;
     font-size: 16px;
     line-height: 1.3;
+
+}
+section.window.overview.course ul.description{
+    margin-bottom: 40px;
 }
 section.window.overview .text_content h4{
     text-align: center;
@@ -795,7 +814,6 @@ section.window.overview.course .text_content h4 span{
 section.window.feedback{
     background: url(./../../images/IMG_8823.webp) -65px -240px no-repeat;
     background-size: 115%;
-    backdrop-filter: blur(20px);
 }
 section.window.feedback .background{
     backdrop-filter: blur(20px);
@@ -840,48 +858,56 @@ section.window.feedback .content .feedback-block:nth-child(2n-1){
     align-self: flex-end;
 }
 
-section.window.kurs-needed .background .skulls span{
+section.window.course-needed .background .skulls span{
     transform: none;
     width: 100%;
-    height: 35%;
+    height: 50%;
     background-image: url(./../../images/skull-2.webp);
     background-size: 65%;
     
 }
-section.window.kurs-needed .background .skulls span.top{
+section.window.course-needed .background .skulls span.top{
     transform: scaleX(-1) rotate(0deg);
     background-position: right 100px;
 }
-section.window.kurs-needed .background .skulls span.bottom{
+section.window.course-needed .background .skulls span.bottom{
     height: 50%;
     background-position: right 60px;
 }
-section.window.kurs-needed .content{
+section.window.course-needed .content{
     padding: 0 0 50px 0;
+    height: 64%;
 }
-section.window.kurs-needed .content .description{
+section.window.course-needed .content .description{
     transform: translateY(-35px);
 }
-section.window.kurs-needed .content .course-name{
+.course-name{
+    filter: brightness(1);
+    background-color: #000;
     text-align: center;
     line-height: 1.2;
 }
-section.window.kurs-needed .content .course-name p{
+.course-name p{
     font-size: 30px;
 }
-section.window.kurs-needed .content .course-name h5{
+.course-name h5{
     font-size: 32px;
 }
-section.window.kurs-needed .content .course-name h5 span{
+.course-name h5 span{
     color: yellow;
 }
 
 section.window.about.schedule{
     background: url(./../../images/IMG_8824.webp) -50px no-repeat;
     background-size: 115%;
+    min-height: 80vh;
+}
+section.window.about.schedule .background{
+    backdrop-filter: blur(3px) brightness(70%);
 }
 section.window.about.schedule .container{
     padding-top: 40px;
+    height: 75vh;
 }
 section.window.about.schedule .content{
     height: 80%;
@@ -934,6 +960,7 @@ section.window.tariffs{
     background-position: center 350px;
     background-repeat: no-repeat;
     background-size: 95%;
+    height: 75vh;
 }
 section.window.tariffs .background{
     backdrop-filter: grayscale(80%) brightness(50%);
@@ -950,7 +977,7 @@ section.window.tariffs .content .section-title span{
     color: yellow;
 }
 section.window.tariffs .content .tariffs-description{
-
+    margin-bottom: 35px;
 }
 section.window.tariffs .content .includes-block{
     /*padding: 10px;*/
@@ -1018,4 +1045,238 @@ section.window.tariffs .content .tariffs-description .price-list .deal-price spa
     border: none;
     z-index: 99;
 
+}
+
+/* Стилі для кнопки відкриття форми */
+.open-form-btn {
+    width: 100%;
+    background-color: green;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.open-form-btn:hover {
+    background-color: #006400;
+    /*transform: translate(-50%, -50%) scale(1.05);*/
+}
+
+/* Стилі для модального вікна */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1001;
+}
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    margin: 15% auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #666;
+}
+
+.close-modal:hover {
+    color: #000;
+}
+
+.modal-content h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Стилі для форми */
+.course-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#courseForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: green;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    display: none;
+}
+
+.submit-btn {
+    background-color: green;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #006400;
+}
+
+/* Анімація для модального вікна */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-content {
+    animation: modalFadeIn 0.3s ease;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 20% auto;
+        width: 95%;
+        padding: 20px;
+    }
+    
+    .open-form-btn {
+        padding: 12px 25px;
+        font-size: 18px;
+    }
+}
+
+/* Стилі для кастомного селектора */
+.custom-select {
+    position: relative;
+    width: 100%;
+}
+
+.custom-select select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    padding: 15px 45px 15px 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #333;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.custom-select select:hover {
+    border-color: #999;
+}
+
+.custom-select select:focus {
+    outline: none;
+    border-color: green;
+    box-shadow: 0 0 0 3px rgba(0, 128, 0, 0.1);
+}
+
+.select-arrow {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E") no-repeat center;
+    background-size: contain;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+.custom-select select:focus + .select-arrow {
+    transform: translateY(-50%) rotate(180deg);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23008000'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+}
+
+/* Стилі для опцій */
+.custom-select select option {
+    padding: 15px;
+    background-color: white;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.custom-select select option:first-child {
+    color: #999;
+    font-weight: normal;
+}
+
+/* Стилі для активного стану */
+.custom-select select:focus option:checked {
+    background: linear-gradient(0deg, green 0%, green 100%);
+    color: white;
+}
+
+/* Адаптивність для селектора */
+@media (max-width: 768px) {
+    .custom-select select {
+        padding: 12px 40px 12px 15px;
+        font-size: 14px;
+    }
+    
+    .select-arrow {
+        right: 12px;
+        width: 10px;
+        height: 10px;
+    }
 }

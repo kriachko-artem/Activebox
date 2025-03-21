@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="src/styles/global.css">
 
     <!-- Scripts -->
+    <script src="scripts/telegram.js"></script>
     <script src="scripts/main.js"></script>
 </head>
 <body>
@@ -60,6 +61,7 @@
     <main>
         <div class="shadows"></div>
         <div class="first-view">
+            <div class="background"></div>
             <div class="container">
                 <div class="first-view-container">
                     <div class="about">
@@ -69,10 +71,10 @@
                         </h2>
                         <div class="description">
                             <p>Навчіться безпечно та впевнено працювати з ботуліничними нейропротеїнами, щоб отримувати
-                                передбачувані результати та задоволених пацієнтів –
-                                <br><span>всього за один курс.</span>
+                                передбачувані результати та задоволених пацієнтів
+                                <br><span>всього за один курс</span>
                             </p>
-                            <span class="remark">⚡відеокурс у запису + онлайн ZOOM | 20 уроків</span>
+                            <span class="remark">⚡відеокурс у запису + онлайн ZOOM <br> 20 уроків</span>
                         </div>
                     </div>
                     <div class="start">
@@ -116,10 +118,10 @@
                         </li>
                         <li class="item">✅ Практика без ризику – розбір поширених помилок - профілактика та корекція.
                         </li>
-                        <li class="item">✅ Зворотний зв’язок і підтримка – регулярні ZOOM-зустрічі та обговорення з
+                        <li class="item">✅ Зворотний зв'язок і підтримка – регулярні ZOOM-зустрічі та обговорення з
                             Денисом Калашником.
                         </li>
-                        <li class="item">✅ Бонус! – методичка “Точки/дози при ботулінотерапії Full Face”.</li>
+                        <li class="item">✅ Бонус! – методичка "Точки/дози при ботулінотерапії Full Face".</li>
                     </ul>
                     <h4>📢 Приєднуйтесь зараз і станьте експертом у ботулінотерапії!</h4>
                 </div>
@@ -223,7 +225,7 @@
                 </div>
             </div>
         </section>
-        <section class="window overview kurs-needed">
+        <section class="window overview course-needed">
             <div class="background">
                 <div class="skulls">
                     <span class="top"></span>
@@ -245,14 +247,14 @@
                             дій.
                         </li>
                     </ul>
-                    <div class="course-name">
-                        <p>програма</p>
-                        <h5>5-ТИЖНЕВИЙ КУРС <br> <span>«МІМІКА»</span></h5>
-                    </div>
                 </div>
             </div>
         </section>
-        <section id="program" class="window about schedule">
+        <div id="program" class="course-name">
+            <p>програма</p>
+            <h5>5-ТИЖНЕВИЙ КУРС <br> <span>«МІМІКА»</span></h5>
+        </div>
+        <section class="window about schedule">
             <div class="background"></div>
             <div class="container">
                 <div class="content text_content">
@@ -419,25 +421,25 @@
                     </h3>
                     <div class="tariffs-description">
                         <div class="includes-block">
-							<h5 class="includes">Включає:</h5>
-							<ul class="includes-list">
+                            <h5 class="includes">Включає:</h5>
+                            <ul class="includes-list">
                                 <li>10 відеоуроків</li>
                                 <li>Стандартні та авторські протоколи</li>
                                 <li>Домашні завдання</li>
                                 <li>Загальний чат студентів</li>
                                 <li>Доступ до курсу 3 місяці</li>
-							</ul>
+                            </ul>
                         </div>
                         <div class="includes-block">
-							<h5 class="not-includes">Не включає:</h5>
-							<ul class="includes-list">
+                            <h5 class="not-includes">Не включає:</h5>
+                            <ul class="includes-list">
                                 <li>Zoom-зустрічі (2 рази на тиждень)</li>
-								<li>Перевірку домашніх завдань</li>
-								<li>Методичний посібник з схемами / розміткою / дозуванням</li>
+                                <li>Перевірку домашніх завдань</li>
+                                <li>Методичний посібник з схемами / розміткою / дозуванням</li>
                                 <li>Індивідуальний розбір пацієнтів, аналіз знань та виявлення проблем</li>
                                 <li>3 індивідуальних заняття з Денисом Калашником</li>
                                 <li>Розширений методичний посібник з усіма фішками та дозуванням.</li>
-							</ul>
+                            </ul>
                         </div>
                         <ul class="price-list">
                             <li class="price"><span>Вартість:</span> 12 600 грн</li>
@@ -476,7 +478,7 @@
                             <ul class="includes-list">
                                 <li>Індивідуальний розбір пацієнтів, аналіз знань та виявлення проблем</li>
                                 <li>3 індивідуальних ZOOM заняття з Денисом Калашником</li>
-                                <li>Розширений методичний посібник з усіма фішками та дозуванням. дозуванням. </li>
+                                <li>Розширений методичний посібник з усіма фішками та дозуванням. дозуванням.</li>
                             </ul>
                         </div>
                         <ul class="price-list">
@@ -519,12 +521,49 @@
                             </li>
                         </ul>
                     </div>
+                    <button id="open-form" class="open-form-btn">Записатися на курс</button>
                 </div>
             </div>
         </section>
     </main>
     <footer></footer>
-<!--    <button class="scroll_button"></button>-->
+
+    <!-- Модальне вікно з формою -->
+    <div id="formModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <form id="courseForm">
+                <div class="form-group">
+                    <label for="name">Ім'я</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error-message">Будь ласка, введіть ваше ім'я</span>
+                </div>
+                <div class="form-group">
+                    <label for="education">Освіта</label>
+                    <input type="tel" id="education" name="education" required>
+                    <span class="error-message">Освіта</span>
+                </div>
+                <div class="form-group">
+                    <label for="telegram">Telegram</label>
+                    <input type="text" id="telegram" name="telegram" placeholder="@username" required>
+                    <span class="error-message">Будь ласка, введіть коректний Telegram логін, що починається з @</span>
+                </div>
+                <div class="form-group">
+                    <label for="tariff">Оберіть тариф</label>
+                    <div class="custom-select">
+                        <select id="tariff" name="tariff" required>
+                            <option value="">Оберіть тариф</option>
+                            <option value="Самостійний">Самостійний</option>
+                            <option value="З підтримкою">З підтримкою</option>
+                            <option value="За руку">За руку</option>
+                        </select>
+                    </div>
+                    <span class="error-message">Будь ласка, оберіть тариф</span>
+                </div>
+                <button type="submit" class="submit-btn">Відправити</button>
+            </form>
+        </div>
+    </div>
 </div>
 </body>
 </html>
