@@ -31,17 +31,26 @@ window.onload = function () {
     const openFormBtn = document.querySelector('.open-form-btn');
     const closeModalBtn = document.querySelector('.close-modal');
     const form = document.getElementById('courseForm');
+    const successMessage = document.getElementById('successMessage');
 
     // Відкриття модального вікна
     openFormBtn.addEventListener('click', () => {
         modal.style.display = 'block';
         document.body.style.overflow = 'hidden'; // Блокуємо прокрутку
+        // Скидаємо стан форми та повідомлення
+        form.reset();
+        form.style.display = 'block';
+        successMessage.style.display = 'none';
     });
 
     // Закриття модального вікна
     closeModalBtn.addEventListener('click', () => {
         modal.style.display = 'none';
         document.body.style.overflow = ''; // Відновлюємо прокрутку
+        // Скидаємо стан форми та повідомлення
+        form.reset();
+        form.style.display = 'block';
+        successMessage.style.display = 'none';
     });
 
     // Закриття модального вікна при кліку поза ним
@@ -49,6 +58,10 @@ window.onload = function () {
         if (e.target === modal) {
             modal.style.display = 'none';
             document.body.style.overflow = '';
+            // Скидаємо стан форми та повідомлення
+            form.reset();
+            form.style.display = 'block';
+            successMessage.style.display = 'none';
         }
     });
 
@@ -58,7 +71,7 @@ window.onload = function () {
         
         const name = document.getElementById('name').value;
         const education = document.getElementById('education').value;
-        const telegram = document.getElementById('telegram').value;
+        const instagram = document.getElementById('instagram').value;
         const tariff = document.getElementById('tariff').value;
 
         // Валідація імені
@@ -73,9 +86,9 @@ window.onload = function () {
             return;
         }
 
-        // Валідація Telegram
-        if (!telegram.startsWith('@')) {
-            showError('telegram', 'Telegram логін має починатися з @');
+        // Валідація Instagram
+        if (!instagram) {
+            showError('instagram', 'Будь ласка, введіть ваш Instagram логін');
             return;
         }
 
@@ -89,19 +102,27 @@ window.onload = function () {
         const formData = {
             name,
             education,
-            telegram,
+            instagram,
             tariff
         };
 
         // Відправка даних в Telegram
-        sendToTelegram(formData);
-
-        // Закриваємо модальне вікно
-        modal.style.display = 'none';
-        document.body.style.overflow = '';
-        
-        // Очищаємо форму
-        form.reset();
+        sendToTelegram(formData).then(() => {
+            // Приховуємо форму
+            form.style.display = 'none';
+            // Показуємо повідомлення про успіх
+            successMessage.style.display = 'block';
+            
+            // Автоматично закриваємо модальне вікно через 3 секунди
+            setTimeout(() => {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+                // Скидаємо стан форми та повідомлення
+                form.reset();
+                form.style.display = 'block';
+                successMessage.style.display = 'none';
+            }, 3000);
+        });
     });
 
     // Функція для показу помилок

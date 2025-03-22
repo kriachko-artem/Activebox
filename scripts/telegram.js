@@ -10,8 +10,8 @@ async function sendToTelegram(formData) {
 🆕 Нова заявка на курс!
 
 👤 Ім'я: ${formData.name}
-📱 Телефон: ${formData.phone}
-💬 Telegram: ${formData.telegram}
+📚 Освіта: ${formData.education}
+📸 Instagram: ${formData.instagram}
 📋 Тариф: ${formData.tariff}
         `.trim();
 

@@ -533,31 +533,37 @@
     <div id="formModal" class="modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
+            <div id="successMessage" class="success-message" style="display: none;">
+                <i class="fas fa-check-circle"></i>
+                <p>Дякуємо! Ваша заявка успішно відправлена.</p>
+                <p>Ми зв'яжемося з вами найближчим часом.</p>
+            </div>
             <form id="courseForm">
                 <div class="form-group">
-                    <label for="name">Ім'я</label>
-                    <input type="text" id="name" name="name" required>
+                    <label for="name">Імʼя та Прізвище</label>
+                    <input type="text" id="name" name="name" placeholder="Ян Птачек" required>
                     <span class="error-message">Будь ласка, введіть ваше ім'я</span>
                 </div>
                 <div class="form-group">
                     <label for="education">Освіта</label>
                     <input type="text" id="education" name="education" required>
-                    <span class="error-message">Освіта</span>
+                    <span class="error-message">Будь ласка, вкажіть вашу освіту</span>
                 </div>
                 <div class="form-group">
-                    <label for="telegram">Telegram</label>
-                    <input type="text" id="telegram" name="telegram" placeholder="@username" required>
-                    <span class="error-message">Будь ласка, введіть коректний Telegram логін, що починається з @</span>
+                    <label for="instagram">Instagram</label>
+                    <input type="text" id="instagram" name="instagram" placeholder="Введіть ваш Instagram логін" required>
+                    <span class="error-message">Будь ласка, введіть ваш Instagram логін</span>
                 </div>
                 <div class="form-group">
                     <label for="tariff">Оберіть тариф</label>
                     <div class="custom-select">
                         <select id="tariff" name="tariff" required>
                             <option value="">Оберіть тариф</option>
-                            <option value="Самостійний">Самостійний</option>
-                            <option value="З підтримкою">З підтримкою</option>
-                            <option value="За руку">За руку</option>
+                            <option value="self">Самостійний</option>
+                            <option value="with-support">З підтримкою</option>
+                            <option value="by-hand">За руку</option>
                         </select>
+                        <span class="select-arrow"></span>
                     </div>
                     <span class="error-message">Будь ласка, оберіть тариф</span>
                 </div>
