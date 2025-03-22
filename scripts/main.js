@@ -57,7 +57,7 @@ window.onload = function () {
         e.preventDefault();
         
         const name = document.getElementById('name').value;
-        const phone = document.getElementById('phone').value;
+        const education = document.getElementById('education').value;
         const telegram = document.getElementById('telegram').value;
         const tariff = document.getElementById('tariff').value;
 
@@ -67,10 +67,9 @@ window.onload = function () {
             return;
         }
 
-        // Валідація телефону
-        const phoneRegex = /^\+?[\d\s-()]{10,}$/;
-        if (!phoneRegex.test(phone)) {
-            showError('phone', 'Введіть коректний номер телефону');
+        // Валідація освіти
+        if (!education) {
+            showError('education', 'Будь ласка, вкажіть вашу освіту');
             return;
         }
 
@@ -89,7 +88,7 @@ window.onload = function () {
         // Якщо всі поля валідні, відправляємо дані
         const formData = {
             name,
-            phone,
+            education,
             telegram,
             tariff
         };
