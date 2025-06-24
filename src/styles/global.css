@@ -1008,7 +1008,7 @@ section.window.tariffs .content .tariffs-description .not-includes{
 section.window.tariffs .content .tariffs-description .price-list{
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 10px;
 }
 section.window.tariffs .content .tariffs-description .price-list li{
@@ -1018,11 +1018,12 @@ section.window.tariffs .content .tariffs-description .price-list li{
     justify-content: center;
     align-items: center;
     column-gap: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    color: #000;
+    background-color: rgba(0, 128, 0, 0.6);
+    backdrop-filter: blur(5px);
+    border-radius: 50px;
+    color: #fff;
     width: 60%;
-    height: 100px;
+    height: 60px;
     text-align: center!important;
 }
 section.window.tariffs .content .tariffs-description .price-list .price span{
