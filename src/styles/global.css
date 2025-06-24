@@ -960,10 +960,9 @@ section.window.tariffs{
     background-position: center 350px;
     background-repeat: no-repeat;
     background-size: 95%;
-    height: 75vh;
 }
 section.window.tariffs .background{
-    backdrop-filter: grayscale(80%) brightness(50%);
+    backdrop-filter: grayscale(80%) brightness(50%) blur(5px);
 
 }
 section.window.tariffs .content .section-title{
