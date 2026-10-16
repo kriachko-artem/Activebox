@@ -385,7 +385,9 @@ body {
 }
 header{
     width: 100%;
-    position: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
     padding: 20px 0;
     z-index: 4;
     display: flex;
@@ -541,6 +543,7 @@ header nav .navlinks{
     top: 0;
     left: 0;
     height: 50vh;
+    height: 50svh;
     padding-top: 100px;
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(20px);
@@ -563,6 +566,7 @@ main .shadows{
     top: 0;
     z-index: 2;
     height: 100vh;
+    height: 100svh;
     width: 100%;
     -webkit-box-shadow: inset 0px -311px 67px -160px rgba(0,0,0,1), inset 0px 311px 67px -160px rgba(0,0,0,1);
     -moz-box-shadow: inset 0px -311px 67px -160px rgba(0,0,0,1), inset 0px 311px 67px -160px rgba(0,0,0,1);
@@ -574,6 +578,7 @@ main .first-view{
     box-shadow: inset 0px -378px 67px -200px rgba(0,0,0,1);
     /*box-shadow: inset 0px -350px 67px -200px rgba(0,0,0,1), inset 0px 350px 67px -200px rgba(0,0,0,1);*/
     height: 100vh;
+    height: 100svh;
     background: url(./../../images/IMG_8821.webp) 0 -140px no-repeat;
     background-size: 100%;
     /*background-position: center center;*/
@@ -673,6 +678,7 @@ main .first-view .first-view-container .start a{
 
 section.window{
     min-height: 90vh;
+    min-height: 90svh;
     position: relative;
     /*top: -110px;*/
 }
@@ -714,6 +720,7 @@ section.window.about-me .container{
 }
 section.window.about-me .text_content {
     height: 70vh;
+    height: 70svh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -742,6 +749,7 @@ section.window.about-me .text_content .description{
 
 section.window .container{
     min-height: 80vh;
+    min-height: 80svh;
 }
 section.window.overview .background::after{
     -webkit-box-shadow: inset 0px -390px 122px -218px rgba(0,0,0,1), inset 0px 350px 122px -218px rgba(0,0,0,1);
@@ -901,6 +909,7 @@ section.window.about.schedule{
     background: url(./../../images/IMG_8824.webp) -50px no-repeat;
     background-size: 115%;
     min-height: 80vh;
+    min-height: 80svh;
 }
 section.window.about.schedule .background{
     backdrop-filter: blur(3px) brightness(70%);
@@ -908,6 +917,7 @@ section.window.about.schedule .background{
 section.window.about.schedule .container{
     padding-top: 40px;
     height: 75vh;
+    height: 75svh;
 }
 section.window.about.schedule .content{
     height: 80%;

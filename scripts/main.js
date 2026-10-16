@@ -19,7 +19,7 @@ window.onload = function () {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute("href"));
             if (target) {
-                const offset = 100; // Відступ у пікселях
+                const offset = 20; // Відступ у пікселях
                 const top = target.getBoundingClientRect().top + window.scrollY - offset;
                 window.scrollTo({ top, behavior: "smooth" });
             }
