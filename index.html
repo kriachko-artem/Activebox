@@ -2,566 +2,451 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ексклюзивний 5-тижневий курс з ботулінотерапії від Дениса Калашника">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#000000">
     <title>MIMIKA – Секрети ботулінотерапії</title>
-    <link rel="icon" href="./favicon.png" type="image/x-icon">
+    <meta name="description" content="Ексклюзивний 5-тижневий курс з ботулінотерапії від Дениса Калашника: відеоуроки, ZOOM-зустрічі, протоколи та сертифікат.">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="uk_UA">
+    <meta property="og:title" content="MIMIKA – Секрети ботулінотерапії">
+    <meta property="og:description" content="Ексклюзивний 5-тижневий курс з ботулінотерапії від Дениса Калашника.">
+    <meta property="og:image" content="/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="src/styles/reset.css">
-    <link rel="stylesheet" href="src/styles/global.css">
-
-    <!-- Scripts -->
-    <script src="scripts/telegram.js"></script>
-    <script src="scripts/main.js"></script>
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <script type="module" src="./src/main.js"></script>
 </head>
 <body>
-<div class="wrapper">
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <div class="site-name">MIMIKA
-                        <div class="masks">
-							<span class="mask">
-								<img src="./images/icons/mask.png" alt="mask">
-							</span>
-                            <span class="mask">
-								<img src="./images/icons/mask-2.png" alt="mask">
-							</span>
-                        </div>
-                    </div>
-                    <span class="site-label">Секрети ботулінотерапії</span>
-                </div>
-                <div class="nav-menu">
-                    <div class="burger">
-                        <span class="topLine"></span>
-                        <span class="middleLine"></span>
-                        <span class="bottomLine"></span>
-                    </div>
-                    <ul class="navlinks">
-                        <li><a href="#about-me">Про мене</a></li>
-                        <li><a href="#about-course">Про курс</a></li>
-                        <li><a href="#feedback">Відгуки</a></li>
-                        <li><a href="#program">Програма</a></li>
-                        <li><a href="#tariffs">Тарифи</a></li>
-                    </ul>
-                </div>
-            </nav>
+<header class="site-header">
+    <div class="container site-header__inner">
+        <a class="logo" href="#top" aria-label="MIMIKA — на початок сторінки">
+            <span class="logo__name">MIMIKA
+                <span class="logo__masks" aria-hidden="true">
+                    <img src="./src/assets/images/mask.webp" alt="" width="80" height="99">
+                    <img src="./src/assets/images/mask-2.webp" alt="" width="80" height="99">
+                </span>
+            </span>
+            <span class="logo__label">Секрети ботулінотерапії</span>
+        </a>
+
+        <button class="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="site-nav">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Розділи сайту">
+            <ul class="site-nav__links">
+                <li><a href="#about-me">Про мене</a></li>
+                <li><a href="#about-course">Про курс</a></li>
+                <li><a href="#feedback">Відгуки</a></li>
+                <li><a href="#program">Програма</a></li>
+                <li><a href="#tariffs">Тарифи</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="top">
+    <!-- Перший екран -->
+    <section class="hero">
+        <div class="section-photo hero__photo">
+            <img src="./src/assets/images/hero-720.webp"
+                 srcset="./src/assets/images/hero-720.webp 720w, ./src/assets/images/hero-1200.webp 1200w"
+                 sizes="(min-width: 900px) 50vw, 100vw"
+                 width="720" height="1471" alt="Денис Калашник" fetchpriority="high">
         </div>
-    </header>
-    <main>
-        <div class="shadows"></div>
-        <div class="first-view">
-            <div class="background"></div>
-            <div class="container">
-                <div class="first-view-container">
-                    <div class="about">
-                        <h2><span>Ексклюзивний</span>
-                            <br>5-тижневий курс
-                            <br>Дениса Калашника
-                        </h2>
-                        <div class="description">
-                            <p>Навчіться безпечно та впевнено працювати з ботуліничними нейропротеїнами, щоб отримувати
-                                передбачувані результати та задоволених пацієнтів
-                                <br><span>всього за один курс</span>
-                            </p>
-                            <span class="remark">⚡відеокурс у запису + онлайн ZOOM <br> 16 уроків</span>
-                        </div>
-                    </div>
-                    <div class="start">
-                        <p>Обирайте свій тариф та приєднуйся до курсу!</p>
-                        <a href="#tariffs">Тарифи курсу</a>
-                    </div>
+        <div class="container hero__inner">
+            <div class="hero__top">
+                <h1 class="hero__title" data-intro>
+                    <span class="accent">Ексклюзивний</span>
+                    <span>5-тижневий курс</span>
+                    <span>Дениса Калашника</span>
+                </h1>
+            </div>
+            <div class="hero__bottom" data-intro>
+                <p class="hero__lead">
+                    Навчіться безпечно та впевнено працювати з ботуліничними нейропротеїнами, щоб отримувати
+                    передбачувані результати та задоволених пацієнтів
+                    <span class="hero__lead-accent">всього за один курс</span>
+                </p>
+                <p class="hero__remark">⚡ відеокурс у запису + онлайн ZOOM<br>16 уроків</p>
+                <div class="hero__cta">
+                    <p>Обирайте свій тариф та приєднуйтесь до курсу!</p>
+                    <a class="btn" href="#tariffs">Тарифи курсу</a>
                 </div>
             </div>
         </div>
-        <section id="about-me" class="window about about-me">
-            <div class="background"></div>
-            <div class="container">
-                <div class="content text_content">
-                    <h3 class="section-title"><span>Денис</span><br> Калашник</h3>
-                    <ul class="description">
-                        <li class="item">Лікар-хірург, косметолог</li>
-                        <li class="item">Засновник "ADALINE CLINIC", Одеса</li>
-                        <li class="item">Провідний спеціаліст та тренер з інʼєкційних методик у косметології</li>
-                        <li class="item">Член Асоціації Правників Естетичної Медицини</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section id="about-course" class="window overview">
-            <div class="background">
-                <div class="skulls">
-                    <span class="top"></span>
-                    <span class="bottom"></span>
-                </div>
-            </div>
-            <div class="container">
-                <div class="content text_content">
-                    <h3 class="section-title">Що Вас чекає на курсі?</h3>
-                    <ul class="description">
-                        <li class="item">✅ Ефективні та безпечні протоколи – лише перевірені методики роботи з
-                            ботулотоксином.
-                        </li>
-                        <li class="item">✅ Сучасний підхід – розбір анатомії, техніки введення, дозування та робота з
-                            різними зонами.
-                        </li>
-                        <li class="item">✅ Практика без ризику – розбір поширених помилок - профілактика та корекція.
-                        </li>
-                        <li class="item">✅ Зворотний зв'язок і підтримка – регулярні ZOOM-зустрічі та обговорення з
-                            Денисом Калашником.
-                        </li>
-                        <li class="item">✅ Бонус! – методичка "Точки/дози при ботулінотерапії Full Face".</li>
-                    </ul>
-                    <h4>📢 Приєднуйтесь зараз і станьте експертом у ботулінотерапії!</h4>
-                </div>
-            </div>
-        </section>
-        <section class="window overview course">
-            <div class="background">
-                <div class="skulls">
-                    <span class="top"></span>
-                    <span class="bottom"></span>
-                </div>
-            </div>
-            <div class="container">
-                <div class="content text_content">
-                    <h3 class="section-title">КУРС ДЛЯ ЛІКАРІВ, ЯКІ ХОЧУТЬ:</h3>
-                    <ul class="description">
-                        <li class="item">✅ Опановувати ботулінотерапію з нуля або підвищити свою кваліфікацію.</li>
-                        <li class="item">✅ Працювати впевнено і без страху, розуміючи всі тонкощі роботи з ботоксом та
-                            іншими препаратами.
-                        </li>
-                        <li class="item">✅ Уникати помилок та ускладнень, застосовуючи безпечні техніки.</li>
-                        <li class="item">✅ Додати затребувану процедуру у свою практику та збільшити дохід.</li>
-                        <li class="item">✅ Стати впевненим спеціалістом, який приваблює вдячних пацієнтів.</li>
-                    </ul>
-                    <h4>🔹 Ви <span>навчитесь думати головою</span>, а не шаблонами, адже отримаєте перевірені <span>багаторічним досвідом</span>
-                        схеми та дози.
-                    </h4>
-                </div>
-            </div>
-        </section>
-        <section id="feedback" class="window feedback">
-            <div class="background"></div>
-            <div class="container">
-                <div class="content">
-                    <h3 class="section-title">І звісно, косметологи <br> з моїх навчань це підтвердять🔥</h3>
-                    <ul class="blocks">
-                        <li class="feedback-block">
-                            <span class="icon"><img src="./images/icons/ava-1.png" alt="ava"></span>
-                            <p>Добрий день ! Була сьогодні у вас на <br>
-                                навчання !<br>
-                                Вам 🙏все доступно <br>
-                                пояснюєте і легко сприймається нова<br> для мене інформація. ☺️<br>
-                                Буду чекати нових зустрічей з <br> вашими цікавими протоколами. <br>
-                                Щиро вдячна !🤗
-                            </p>
-                        </li>
-                        <li class="feedback-block">
-                            <span class="icon"><img src="./images/icons/ava-2.png" alt="ava"></span>
-                            <p>Я Благодарю Всевышнего, что он <br>
-                                дарует нам таких учителей как Вы <br>
-                                🙏. <br>
+    </section>
 
-                                Именно они позволяют нам открыть <br>
-                                новые перспективы, и новое видение <br>
-                                жизни . <br><br>
-
-
-                                Денис Александрович Ваш талант, <br>
-                                простота и легкость подачи <br>
-                                информации, меня просто удивляет
-                                <br>
-                                🙃.
-                                <br>
-
-                                Это самое развёрнутое по вебинару <br>
-                                обучение, которое я когда либо <br>
-                                встречала .
-                                <br>
-
-                                Вебинар прослушала "на одном <br>
-                                дыхании"<br>
-                                🤗<br><br>
-
-                                Спасибо Вам за терпение и знания ,<br>
-                                которыми Вы так щедро делитесь.</p>
-                        </li>
-                        <li class="feedback-block">
-                            <span class="icon"></span>
-                            <p>Денис! Большое спасибо, еще раз за <br>
-                                семинар!!
-                                Все было очень доходчиво <br>
-                                и информативно !! 👌👌👌 <br>
-                                Вы – прекрасный преподаватель! <br>
-                                И очень грамотный специалист ! <br>
-                                Успехов Вам и процветания ! <br>
-                                Буду всегда рада любой <br>
-                                возможности попасть к вам опять на <br>
-                                семинар!</p>
-                        </li>
-                        <li class="feedback-block">
-                            <span class="icon"><img src="./images/icons/ava-3.png" alt="ava"></span>
-                            <p>Спасибо большое ,Денис за<br>
-                                информативнейший семинар! И <br>
-                                отдельное Благодарю за процедуру<br>
-                                ботулинотерапии ,впервые за много<br>
-                                месяцев спала как младенец!🙏🏻👏<br>
-                                🥰
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="window overview course-needed">
-            <div class="background">
-                <div class="skulls">
-                    <span class="top"></span>
-                    <span class="bottom"></span>
-                </div>
-            </div>
-            <div class="container">
-                <div class="content text_content">
-                    <h3 class="section-title">КУРС ПОТРІБЕН ВАМ, ЯКЩО ВИ</h3>
-                    <ul class="description">
-                        <li class="item">🔹 Втомилися від сумнівів, боїтеся зробити помилку, яка може нашкодити
-                            пацієнту.
-                        </li>
-                        <li class="item">🔹 Не знаєте, як правильно розраховувати дозування та точки введення.</li>
-                        <li class="item">🔹 Бачите, що пацієнти залишаються незадоволеними і не отримують потрібного
-                            результату.
-                        </li>
-                        <li class="item">🔹 Відчуваєте невпевненість при роботі з ботоксом і хочете чіткий алгоритм
-                            дій.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <div id="program" class="course-name">
-            <p>програма</p>
-            <h5>5-ТИЖНЕВИЙ КУРС <br> <span>«МІМІКА»</span></h5>
+    <!-- Про мене -->
+    <section id="about-me" class="section section--photo about">
+        <div class="section-photo">
+            <img src="./src/assets/images/about-720.webp"
+                 srcset="./src/assets/images/about-720.webp 720w, ./src/assets/images/about-1200.webp 1200w"
+                 sizes="(min-width: 900px) 50vw, 100vw"
+                 width="720" height="1471" alt="" loading="lazy">
         </div>
-        <section class="window about schedule">
-            <div class="background"></div>
-            <div class="container">
-                <div class="content text_content">
-                    <h3 class="section-title"><span>I</span> ТИЖДЕНЬ</h3>
-                    <div class="schedule-description">
-                        <ul class="days">
-                            <li class="day">
-                                <p>ВІДЕОУРОКИ | теорія + практика</p>
-                            </li>
-                            <li class="day">
-                                <p>ZOOM зустріч | обговорення теоретичних та практичних питань.</p>
-                            </li>
-                        </ul>
-                        <ul class="themes">
-                            <li class="theme">
-                                <p class="name">ТЕМА 1</p>
-                                <p>БОТУЛІНОТЕРАПІЇ: Як працює БоНТ-А, розведення, концентрація, протипокази та інше.</p>
-                            </li>
-                            <li class="theme">
-                                <p class="name">ТЕМА 2</p>
-                                <p>Анатомія ботулінотерапії:
-                                    Як мʼязи взаємодіють між собою. Які фактори впливають на тонус. Помилки аналізу
-                                    мʼязів.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="window about schedule">
-            <div class="background"></div>
-            <div class="container">
-                <div class="content text_content">
-                    <h3 class="section-title"><span>II</span> ТИЖДЕНЬ</h3>
-                    <div class="schedule-description">
-                        <ul class="days">
-                            <li class="day">
-                                <p>ВІДЕОУРОКИ | теорія + практика</p>
-                            </li>
-                            <li class="day">
-                                <p>ZOOM зустріч | обговорення теоретичних та практичних питань.</p>
-                            </li>
-                        </ul>
-                        <ul class="themes">
-                            <li class="theme">
-                                <p class="name">ТЕМА 1</p>
-                                <p>Надчерепні мʼязи | Скроневий ліфтинг, корекція зморшок чола та позиції бровей.</p>
-                            </li>
-                            <li class="theme">
-                                <p class="name">ТЕМА 2</p>
-                                <p>ГЛАБЕЛА | доза, глибина, концентрація, техніка.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="window about schedule">
-            <div class="background"></div>
-            <div class="container">
-                <div class="content text_content">
-                    <h3 class="section-title"><span>III</span> ТИЖДЕНЬ</h3>
-                    <div class="schedule-description">
-                        <ul class="days">
-                            <li class="day">
-                                <p>ВІДЕОУРОКИ | теорія + практика</p>
-                            </li>
-                            <li class="day">
-                                <p>ZOOM зустріч | обговорення теоретичних та практичних питань.</p>
-                            </li>
-                        </ul>
-                        <ul class="themes">
-                            <li class="theme">
-                                <p class="name">ТЕМА 1</p>
-                                <p>ОЧІ - три кільця щастя: розмітка та дозування залежно від індивідуальних особливостей
-                                    пацієнта.</p>
-                            </li>
-                            <li class="theme">
-                                <p class="name">ТЕМА 2</p>
-                                <p>НІС - кролячі зморшки, звуження, ліфтинг кінчика носа.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="window about schedule">
-            <div class="background"></div>
-            <div class="container">
-                <div class="content text_content">
-                    <h3 class="section-title"><span>IV</span> ТИЖДЕНЬ</h3>
-                    <div class="schedule-description">
-                        <ul class="days">
-                            <li class="day">
-                                <p>ВІДЕОУРОКИ | теорія + практика</p>
-                            </li>
-                            <li class="day">
-                                <p>ZOOM зустріч | обговорення теоретичних та практичних питань.</p>
-                            </li>
-                        </ul>
-                        <ul class="themes">
-                            <li class="theme">
-                                <p class="name">ТЕМА 1</p>
-                                <p>ГУБИ: зморшки над губою, зміна форми, гінгівальна посмішка та інше.</p>
-                            </li>
-                            <li class="theme">
-                                <p class="name">ТЕМА 2</p>
-                                <p>DAO/DLI : техніки безпечної роботи.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="window about schedule final">
-            <div class="background"></div>
-            <div class="container">
-                <div class="content text_content">
-                    <h3 class="section-title"><span>V</span> ТИЖДЕНЬ</h3>
-                    <div class="schedule-description final">
-                        <ul class="days">
-                            <li class="day">
-                                <p>ВІДЕОУРОКИ | теорія + практика</p>
-                            </li>
-                            <li class="day">
-                                <p>ZOOM зустріч | обговорення теоретичних та практичних питань.</p>
-                            </li>
-                        </ul>
-                        <ul class="themes">
-                            <li class="theme">
-                                <p class="name">ТЕМА 1</p>
-                                <p>ПІДБОРІДДЯ та шия: комплексна робота без ускладнень.</p>
-                            </li>
-                            <li class="theme">
-                                <p class="name">ТЕМА 2</p>
-                                <p>Скелетні мʼязи: звуження обличчя; мігрень.</p>
-                            </li>
-                            <li class="theme">
-                                <p class="name">ТЕМА 3</p>
-                                <p class="bonus">БОНУС ВІДЕОУРОК | теорія + практика | ГІПЕРГІДРОЗ</p>
-                            </li>
-                            <li class="exam">ЕКЗАМЕН З ВИДАЧЕЮ СЕРТИФІКАТА МІЖНАРОДНОГО ЗРАЗКА.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="window tariffs">
-            <div class="background"></div>
-            <div class="container">
-                <div class="content ">
-                    <h3 class="section-title">
-                        <span>ТАРИФИ КУРСУ:</span><br>«САМОСТІЙНИЙ»
-                    </h3>
-                    <div class="tariffs-description">
-                        <div class="includes-block">
-                            <h5 class="includes">Включає:</h5>
-                            <ul class="includes-list">
-                                <li>10 відеоуроків</li>
-                                <li>Стандартні та авторські протоколи</li>
-                                <li>Домашні завдання</li>
-                                <li>Доступ до курсу 3 місяці</li>
-                            </ul>
-                        </div>
-                        <div class="includes-block">
-                            <h5 class="not-includes">Не включає:</h5>
-                            <ul class="includes-list">
-                                <li>5 Zoom-зустрічей</li>
-                                <li>домашні завдання з перевіркою</li>
-                                <li>методичний посібник зі схемами/ розміткою/ дозуваннями</li>
-                                <li>екзамен та сертифікат о проходженні курсу</li>
-                                <li>бонусний урок «гіпергідроз»</li>
-                                <li>3 індивідуальних Zoom-зустрічі з Денисом Калашником</li>
-                                <li>розширений методичний посібник з усіма фішками та дозуваннями</li>
-                                <li>індивідуальна стратегічна сесія від Альони Калашник «Розбір акаунту та стратегія просування на 2 місяці»</li>
-                            </ul>
-                        </div>
-                        <ul class="price-list">
-                            <li class="price"><span>Вартість:</span> 14 800 грн</li>
-<!--                            <li class="deal-price">-->
-<!--                                <p>Рання реєстрація у період 15.03 - 30.03</p>-->
-<!--                                <span>9 900 грн</span>-->
-<!--                            </li>-->
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="tariffs" class="window tariffs">
-            <div class="background"></div>
-            <div class="container">
-                <div class="content ">
-                    <h3 class="section-title">
-                        <span>ТАРИФИ КУРСУ:</span><br>«З ПІДТРИМКОЮ»
-                    </h3>
-                    <div class="tariffs-description">
-                        <div class="includes-block">
-                            <h5 class="includes">Включає:</h5>
-                            <ul class="includes-list">
-                                <li>10 відео уроків</li>
-                                <li>стандартні та авторські протоколи</li>
-                                <li>Чат «ПРАКТИКА» для розбору питань</li>
-                                <li>доступ до курсу 6 місяців</li>
-                                <li>домашні завдання з перевіркою</li>
-                                <li>методичний посібник зі схемами/ розміткою/ дозуваннями</li>
-                                <li>екзамен та сертифікат о проходженні курсу</li>
-                            </ul>
-                        </div>
-                        <div class="includes-block">
-                            <h5 class="not-includes">Не включає:</h5>
-                            <ul class="includes-list">
-                                <li>бонусний урок «гіпергідроз»</li>
-                                <li>5 індивідуальних Zoom-зустрічі з Денисом Калашником</li>
-                                <li>розширений методичний посібник з усіма фішками та дозуваннями</li>
-                                <li>індивідуальна стратегічна сесія від Альони Калашник «Розбір акаунту та стратегія просування на 2 місяці»</li>
-                            </ul>
-                        </div>
-                        <ul class="price-list">
-                            <li class="price"><span>Вартість:</span> 24 500 грн</li>
-<!--                            <li class="deal-price">-->
-<!--                                <p>Рання реєстрація у період 15.03 - 30.03</p>-->
-<!--                                <span>14 500 грн</span>-->
-<!--                            </li>-->
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="window tariffs">
-            <div class="background"></div>
-            <div class="container">
-                <div class="content ">
-                    <h3 class="section-title">
-                        <span>ТАРИФИ КУРСУ:</span><br>«ЗА РУКУ»
-                    </h3>
-                    <div class="tariffs-description">
-                        <div class="includes-block">
-                            <h5 class="includes">Включає:</h5>
-                            <ul class="includes-list">
-                                <li>10 відео уроків + 1 бонусний урок «гіпергідроз»</li>
-                                <li><span style="font-weight:bold; text-decoration: underline;">пʼять індивідуальних Zoom-зустрічі</span> з Денисом Калашником</li>
-                                <li>стандартні та авторські протоколи</li>
-                                <li>Чат «ПРАКТИКА» для розбору питань</li>
-                                <li>доступ до курсу 9 місяців</li>
-                                <li>домашні завдання з <span style="font-weight:bold; text-decoration: underline;"> індивідуальною перевіркою та розбором помилок</span></li>
-                                <li>екзамен та сертифікат о проходженні курсу</li>
-                                <li> <span style="font-weight:bold; text-decoration: underline;">розширений</span> методичний посібник з усіма фішками та дозуваннями</li>
-                                <li>індивідуальна стратегічна сесія від Альони Калашник «Розбір акаунту та стратегія просування на 2 місяці»</li>
-                            </ul>
-                        </div>
-                        <ul class="price-list">
-                            <li class="price"><span>Вартість:</span> 39 800 грн</li>
-<!--                            <li class="deal-price">-->
-<!--                                <p>Рання реєстрація у період 15.03 - 30.03</p>-->
-<!--                                <span>21 000 грн</span>-->
-<!--                            </li>-->
-                        </ul>
-                    </div>
-                    <button id="open-form" class="open-form-btn">Записатися на курс</button>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer></footer>
+        <div class="container section__inner about__inner">
+            <h2 class="about__name" data-split><span>Денис</span> Калашник</h2>
+            <ul class="about__list" data-stagger>
+                <li>Лікар-хірург, косметолог</li>
+                <li>Засновник «ADALINE CLINIC», Одеса</li>
+                <li>Провідний спеціаліст та тренер з інʼєкційних методик у косметології</li>
+                <li>Член Асоціації Правників Естетичної Медицини</li>
+            </ul>
+        </div>
+    </section>
 
-    <!-- Модальне вікно з формою -->
-    <div id="formModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div id="successMessage" class="success-message" style="display: none;">
-                <i class="fas fa-check-circle"></i>
-                <p>Дякуємо! Ваша заявка успішно відправлена.</p>
-                <p>Ми зв'яжемося з вами найближчим часом.</p>
+    <!-- Що на курсі -->
+    <section id="about-course" class="section section--skull">
+        <div class="skulls" aria-hidden="true">
+            <img class="skulls__top" src="./src/assets/images/skull-600.webp"
+                 srcset="./src/assets/images/skull-600.webp 600w, ./src/assets/images/skull-1000.webp 1000w"
+                 sizes="(min-width: 900px) 480px, 65vw" width="600" height="794" alt="" loading="lazy">
+            <img class="skulls__bottom" src="./src/assets/images/skull-600.webp"
+                 srcset="./src/assets/images/skull-600.webp 600w, ./src/assets/images/skull-1000.webp 1000w"
+                 sizes="(min-width: 900px) 480px, 65vw" width="600" height="794" alt="" loading="lazy">
+        </div>
+        <div class="container container--narrow section__inner">
+            <h2 class="section-title" data-split>Що Вас чекає на курсі?</h2>
+            <ul class="checklist" data-stagger>
+                <li><b>Ефективні та безпечні протоколи</b> – лише перевірені методики роботи з ботулотоксином.</li>
+                <li><b>Сучасний підхід</b> – розбір анатомії, техніки введення, дозування та робота з різними зонами.</li>
+                <li><b>Практика без ризику</b> – розбір поширених помилок, профілактика та корекція.</li>
+                <li><b>Зворотний зв'язок і підтримка</b> – регулярні ZOOM-зустрічі та обговорення з Денисом Калашником.</li>
+                <li><b>Бонус!</b> – методичка «Точки/дози при ботулінотерапії Full Face».</li>
+            </ul>
+            <p class="section-note" data-reveal>📢 Приєднуйтесь зараз і станьте експертом у ботулінотерапії!</p>
+        </div>
+    </section>
+
+    <!-- Для кого -->
+    <section class="section section--skull">
+        <div class="skulls" aria-hidden="true">
+            <img class="skulls__top" src="./src/assets/images/skull-600.webp"
+                 srcset="./src/assets/images/skull-600.webp 600w, ./src/assets/images/skull-1000.webp 1000w"
+                 sizes="(min-width: 900px) 480px, 65vw" width="600" height="794" alt="" loading="lazy">
+            <img class="skulls__bottom" src="./src/assets/images/skull-600.webp"
+                 srcset="./src/assets/images/skull-600.webp 600w, ./src/assets/images/skull-1000.webp 1000w"
+                 sizes="(min-width: 900px) 480px, 65vw" width="600" height="794" alt="" loading="lazy">
+        </div>
+        <div class="container container--narrow section__inner">
+            <h2 class="section-title" data-split>Курс для лікарів, які хочуть:</h2>
+            <ul class="checklist" data-stagger>
+                <li>Опанувати ботулінотерапію з нуля або підвищити свою кваліфікацію.</li>
+                <li>Працювати впевнено і без страху, розуміючи всі тонкощі роботи з ботоксом та іншими препаратами.</li>
+                <li>Уникати помилок та ускладнень, застосовуючи безпечні техніки.</li>
+                <li>Додати затребувану процедуру у свою практику та збільшити дохід.</li>
+                <li>Стати впевненим спеціалістом, який приваблює вдячних пацієнтів.</li>
+            </ul>
+            <p class="section-note section-note--small" data-reveal>
+                🔹 Ви <span class="accent">навчитесь думати головою</span>, а не шаблонами, адже отримаєте перевірені
+                <span class="accent">багаторічним досвідом</span> схеми та дози.
+            </p>
+        </div>
+    </section>
+
+    <!-- Відгуки -->
+    <section id="feedback" class="section section--photo feedback">
+        <div class="section-photo section-photo--blur">
+            <img src="./src/assets/images/feedback-720.webp"
+                 srcset="./src/assets/images/feedback-720.webp 720w, ./src/assets/images/feedback-1200.webp 1200w"
+                 sizes="100vw" width="720" height="1471" alt="" loading="lazy">
+        </div>
+        <div class="container container--narrow section__inner">
+            <h2 class="section-title section-title--light" data-split>І звісно, косметологи з моїх навчань це підтвердять 🔥</h2>
+            <ul class="reviews">
+                <li class="review">
+                    <img class="review__avatar" src="./src/assets/images/ava-1.webp" alt="" width="96" height="96" loading="lazy">
+                    <p class="review__text">Добрий день! Була сьогодні у вас на навчанні! Вам 🙏 все доступно пояснюєте
+                        і легко сприймається нова для мене інформація. ☺️ Буду чекати нових зустрічей з вашими цікавими
+                        протоколами. Щиро вдячна! 🤗</p>
+                </li>
+                <li class="review">
+                    <img class="review__avatar" src="./src/assets/images/ava-2.webp" alt="" width="96" height="96" loading="lazy">
+                    <p class="review__text">Я Благодарю Всевышнего, что он дарует нам таких учителей как Вы 🙏. Именно
+                        они позволяют нам открыть новые перспективы, и новое видение жизни.<br><br>
+                        Денис Александрович, Ваш талант, простота и легкость подачи информации меня просто удивляет 🙃.
+                        Это самое развёрнутое по вебинару обучение, которое я когда-либо встречала. Вебинар прослушала
+                        «на одном дыхании» 🤗<br><br>
+                        Спасибо Вам за терпение и знания, которыми Вы так щедро делитесь.</p>
+                </li>
+                <li class="review">
+                    <span class="review__avatar review__avatar--empty" aria-hidden="true"></span>
+                    <p class="review__text">Денис! Большое спасибо еще раз за семинар!! Все было очень доходчиво
+                        и информативно!! 👌👌👌 Вы – прекрасный преподаватель! И очень грамотный специалист! Успехов Вам
+                        и процветания! Буду всегда рада любой возможности попасть к вам опять на семинар!</p>
+                </li>
+                <li class="review">
+                    <img class="review__avatar" src="./src/assets/images/ava-3.webp" alt="" width="96" height="96" loading="lazy">
+                    <p class="review__text">Спасибо большое, Денис, за информативнейший семинар! И отдельное Благодарю за
+                        процедуру ботулинотерапии, впервые за много месяцев спала как младенец! 🙏🏻👏 🥰</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Кому потрібен -->
+    <section class="section section--skull-side needs">
+        <div class="needs__skulls" aria-hidden="true">
+            <img class="needs__skull needs__skull--top" src="./src/assets/images/skull-side-700.webp"
+                 srcset="./src/assets/images/skull-side-700.webp 700w, ./src/assets/images/skull-side-1100.webp 1100w"
+                 sizes="(min-width: 900px) 560px, 70vw" width="700" height="530" alt="" loading="lazy">
+            <img class="needs__skull needs__skull--bottom" src="./src/assets/images/skull-side-700.webp"
+                 srcset="./src/assets/images/skull-side-700.webp 700w, ./src/assets/images/skull-side-1100.webp 1100w"
+                 sizes="(min-width: 900px) 560px, 70vw" width="700" height="530" alt="" loading="lazy">
+        </div>
+        <div class="container container--narrow section__inner">
+            <h2 class="section-title" data-split>Курс потрібен вам, якщо ви</h2>
+            <ul class="checklist checklist--diamond" data-stagger>
+                <li>Втомилися від сумнівів, боїтеся зробити помилку, яка може нашкодити пацієнту.</li>
+                <li>Не знаєте, як правильно розраховувати дозування та точки введення.</li>
+                <li>Бачите, що пацієнти залишаються незадоволеними і не отримують потрібного результату.</li>
+                <li>Відчуваєте невпевненість при роботі з ботоксом і хочете чіткий алгоритм дій.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Програма -->
+    <section id="program" class="program">
+        <div class="program__bg" aria-hidden="true">
+            <img src="./src/assets/images/program-720.webp"
+                 srcset="./src/assets/images/program-720.webp 720w, ./src/assets/images/program-1200.webp 1200w"
+                 sizes="100vw" width="720" height="1237" alt="" loading="lazy">
+        </div>
+        <div class="container container--narrow program__inner">
+            <div class="program__intro" data-reveal>
+                <p class="program__kicker">програма</p>
+                <h2 class="program__title">5-тижневий курс <span class="accent">«МІМІКА»</span></h2>
             </div>
-            <form id="courseForm">
-                <div class="form-group">
-                    <label for="name">Імʼя та Прізвище</label>
-                    <input type="text" id="name" name="name" placeholder="Ян Птачек" required>
-                    <span class="error-message">Будь ласка, введіть ваше ім'я</span>
-                </div>
-                <div class="form-group">
-                    <label for="education">Освіта</label>
-                    <input type="text" id="education" name="education" required>
-                    <span class="error-message">Будь ласка, вкажіть вашу освіту</span>
-                </div>
-                <div class="form-group">
-                    <label for="instagram">Instagram</label>
-                    <input type="text" id="instagram" name="instagram" placeholder="Введіть ваш Instagram логін" required>
-                    <span class="error-message">Будь ласка, введіть ваш Instagram логін</span>
-                </div>
-                <div class="form-group">
-                    <label for="tariff">Оберіть тариф</label>
-                    <div class="custom-select">
-                        <select id="tariff" name="tariff" required>
-                            <option value="">Оберіть тариф</option>
-                            <option value="Самостійний">Самостійний</option>
-                            <option value="З підтримкою">З підтримкою</option>
-                            <option value="За руку">За руку</option>
-                        </select>
-                        <span class="select-arrow"></span>
+
+            <ol class="weeks">
+                <li class="week">
+                    <h3 class="week__title"><span class="week__num">I</span> тиждень</h3>
+                    <ul class="week__format">
+                        <li>Відеоуроки | теорія + практика</li>
+                        <li>ZOOM-зустріч | обговорення теоретичних та практичних питань</li>
+                    </ul>
+                    <ul class="week__topics">
+                        <li><span class="week__topic-name">Тема 1</span>Ботулінотерапія: як працює БоНТ-А, розведення, концентрація, протипокази та інше.</li>
+                        <li><span class="week__topic-name">Тема 2</span>Анатомія ботулінотерапії: як мʼязи взаємодіють між собою, які фактори впливають на тонус, помилки аналізу мʼязів.</li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h3 class="week__title"><span class="week__num">II</span> тиждень</h3>
+                    <ul class="week__format">
+                        <li>Відеоуроки | теорія + практика</li>
+                        <li>ZOOM-зустріч | обговорення теоретичних та практичних питань</li>
+                    </ul>
+                    <ul class="week__topics">
+                        <li><span class="week__topic-name">Тема 1</span>Надчерепні мʼязи | скроневий ліфтинг, корекція зморшок чола та позиції брів.</li>
+                        <li><span class="week__topic-name">Тема 2</span>Глабела | доза, глибина, концентрація, техніка.</li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h3 class="week__title"><span class="week__num">III</span> тиждень</h3>
+                    <ul class="week__format">
+                        <li>Відеоуроки | теорія + практика</li>
+                        <li>ZOOM-зустріч | обговорення теоретичних та практичних питань</li>
+                    </ul>
+                    <ul class="week__topics">
+                        <li><span class="week__topic-name">Тема 1</span>Очі – три кільця щастя: розмітка та дозування залежно від індивідуальних особливостей пацієнта.</li>
+                        <li><span class="week__topic-name">Тема 2</span>Ніс – кролячі зморшки, звуження, ліфтинг кінчика носа.</li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h3 class="week__title"><span class="week__num">IV</span> тиждень</h3>
+                    <ul class="week__format">
+                        <li>Відеоуроки | теорія + практика</li>
+                        <li>ZOOM-зустріч | обговорення теоретичних та практичних питань</li>
+                    </ul>
+                    <ul class="week__topics">
+                        <li><span class="week__topic-name">Тема 1</span>Губи: зморшки над губою, зміна форми, гінгівальна посмішка та інше.</li>
+                        <li><span class="week__topic-name">Тема 2</span>DAO/DLI: техніки безпечної роботи.</li>
+                    </ul>
+                </li>
+                <li class="week">
+                    <h3 class="week__title"><span class="week__num">V</span> тиждень</h3>
+                    <ul class="week__format">
+                        <li>Відеоуроки | теорія + практика</li>
+                        <li>ZOOM-зустріч | обговорення теоретичних та практичних питань</li>
+                    </ul>
+                    <ul class="week__topics">
+                        <li><span class="week__topic-name">Тема 1</span>Підборіддя та шия: комплексна робота без ускладнень.</li>
+                        <li><span class="week__topic-name">Тема 2</span>Скелетні мʼязи: звуження обличчя; мігрень.</li>
+                        <li><span class="week__topic-name">Тема 3</span><span class="week__bonus">Бонус-відеоурок | теорія + практика | гіпергідроз</span></li>
+                    </ul>
+                    <p class="week__exam">Екзамен з видачею сертифіката міжнародного зразка</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Тарифи -->
+    <section id="tariffs" class="tariffs">
+        <div class="tariffs__bg" aria-hidden="true">
+            <img src="./src/assets/images/skull-600.webp"
+                 srcset="./src/assets/images/skull-600.webp 600w, ./src/assets/images/skull-1000.webp 1000w"
+                 sizes="(min-width: 900px) 700px, 95vw" width="600" height="794" alt="" loading="lazy">
+        </div>
+        <div class="container tariffs__inner">
+            <h2 class="section-title" data-split>Тарифи курсу</h2>
+
+            <div class="tariffs__grid">
+                <article class="tariff">
+                    <h3 class="tariff__name">«Самостійний»</h3>
+                    <h4 class="tariff__label tariff__label--yes">Включає:</h4>
+                    <ul class="tariff__list">
+                        <li>10 відеоуроків</li>
+                        <li>Стандартні та авторські протоколи</li>
+                        <li>Домашні завдання</li>
+                        <li>Доступ до курсу 3 місяці</li>
+                    </ul>
+                    <h4 class="tariff__label tariff__label--no">Не включає:</h4>
+                    <ul class="tariff__list tariff__list--muted">
+                        <li>5 Zoom-зустрічей</li>
+                        <li>Домашні завдання з перевіркою</li>
+                        <li>Методичний посібник зі схемами / розміткою / дозуваннями</li>
+                        <li>Екзамен та сертифікат про проходження курсу</li>
+                        <li>Бонусний урок «Гіпергідроз»</li>
+                        <li>3 індивідуальні Zoom-зустрічі з Денисом Калашником</li>
+                        <li>Розширений методичний посібник з усіма фішками та дозуваннями</li>
+                        <li>Індивідуальна стратегічна сесія від Альони Калашник «Розбір акаунту та стратегія просування на 2 місяці»</li>
+                    </ul>
+                    <div class="tariff__footer">
+                        <p class="tariff__price"><span>Вартість:</span> 14 800 грн</p>
+                        <button class="btn btn--block" type="button" data-open-form="Самостійний">Обрати тариф</button>
                     </div>
-                    <span class="error-message">Будь ласка, оберіть тариф</span>
+                </article>
+
+                <article class="tariff">
+                    <h3 class="tariff__name">«З підтримкою»</h3>
+                    <h4 class="tariff__label tariff__label--yes">Включає:</h4>
+                    <ul class="tariff__list">
+                        <li>10 відеоуроків</li>
+                        <li>Стандартні та авторські протоколи</li>
+                        <li>Чат «ПРАКТИКА» для розбору питань</li>
+                        <li>Доступ до курсу 6 місяців</li>
+                        <li>Домашні завдання з перевіркою</li>
+                        <li>Методичний посібник зі схемами / розміткою / дозуваннями</li>
+                        <li>Екзамен та сертифікат про проходження курсу</li>
+                    </ul>
+                    <h4 class="tariff__label tariff__label--no">Не включає:</h4>
+                    <ul class="tariff__list tariff__list--muted">
+                        <li>Бонусний урок «Гіпергідроз»</li>
+                        <li>5 індивідуальних Zoom-зустрічей з Денисом Калашником</li>
+                        <li>Розширений методичний посібник з усіма фішками та дозуваннями</li>
+                        <li>Індивідуальна стратегічна сесія від Альони Калашник «Розбір акаунту та стратегія просування на 2 місяці»</li>
+                    </ul>
+                    <div class="tariff__footer">
+                        <p class="tariff__price"><span>Вартість:</span> 24 500 грн</p>
+                        <button class="btn btn--block" type="button" data-open-form="З підтримкою">Обрати тариф</button>
+                    </div>
+                </article>
+
+                <article class="tariff">
+                    <h3 class="tariff__name">«За руку»</h3>
+                    <h4 class="tariff__label tariff__label--yes">Включає:</h4>
+                    <ul class="tariff__list">
+                        <li>10 відеоуроків + 1 бонусний урок «Гіпергідроз»</li>
+                        <li><strong>Пʼять індивідуальних Zoom-зустрічей</strong> з Денисом Калашником</li>
+                        <li>Стандартні та авторські протоколи</li>
+                        <li>Чат «ПРАКТИКА» для розбору питань</li>
+                        <li>Доступ до курсу 9 місяців</li>
+                        <li>Домашні завдання з <strong>індивідуальною перевіркою та розбором помилок</strong></li>
+                        <li>Екзамен та сертифікат про проходження курсу</li>
+                        <li><strong>Розширений</strong> методичний посібник з усіма фішками та дозуваннями</li>
+                        <li>Індивідуальна стратегічна сесія від Альони Калашник «Розбір акаунту та стратегія просування на 2 місяці»</li>
+                    </ul>
+                    <div class="tariff__footer">
+                        <p class="tariff__price"><span>Вартість:</span> 39 800 грн</p>
+                        <button class="btn btn--block" type="button" data-open-form="За руку">Обрати тариф</button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="tariffs__cta" data-reveal>
+                <p>Не знаєте, який тариф обрати? Залиште заявку — ми допоможемо.</p>
+                <button class="btn btn--large" type="button" data-open-form>Записатися на курс</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container site-footer__inner">
+        <a class="logo logo--small" href="#top" aria-label="MIMIKA — на початок сторінки">
+            <span class="logo__name">MIMIKA
+                <span class="logo__masks" aria-hidden="true">
+                    <img src="./src/assets/images/mask.webp" alt="" width="80" height="99" loading="lazy">
+                    <img src="./src/assets/images/mask-2.webp" alt="" width="80" height="99" loading="lazy">
+                </span>
+            </span>
+            <span class="logo__label">Секрети ботулінотерапії</span>
+        </a>
+        <p class="site-footer__copy">© <span data-year>2026</span> Денис Калашник</p>
+    </div>
+</footer>
+
+<!-- Форма заявки -->
+<dialog class="modal" id="form-modal" aria-labelledby="form-title">
+    <div class="modal__content">
+        <button class="modal__close" type="button" aria-label="Закрити" data-close-modal>&times;</button>
+
+        <form class="form" id="course-form" novalidate>
+            <h2 class="form__title" id="form-title">Заявка на курс</h2>
+
+            <div class="form__group">
+                <label for="name">Імʼя та прізвище</label>
+                <input type="text" id="name" name="name" placeholder="Ян Птачек" autocomplete="name" required minlength="2" maxlength="100">
+                <span class="form__error" data-error-for="name"></span>
+            </div>
+            <div class="form__group">
+                <label for="education">Освіта</label>
+                <input type="text" id="education" name="education" required maxlength="200">
+                <span class="form__error" data-error-for="education"></span>
+            </div>
+            <div class="form__group">
+                <label for="instagram">Instagram</label>
+                <input type="text" id="instagram" name="instagram" placeholder="Ваш Instagram логін" autocomplete="off" autocapitalize="off" required maxlength="100">
+                <span class="form__error" data-error-for="instagram"></span>
+            </div>
+            <div class="form__group">
+                <label for="tariff">Тариф</label>
+                <div class="form__select">
+                    <select id="tariff" name="tariff" required>
+                        <option value="">Оберіть тариф</option>
+                        <option value="Самостійний">Самостійний</option>
+                        <option value="З підтримкою">З підтримкою</option>
+                        <option value="За руку">За руку</option>
+                    </select>
                 </div>
-                <button type="submit" class="submit-btn">Відправити</button>
-            </form>
+                <span class="form__error" data-error-for="tariff"></span>
+            </div>
+
+            <!-- Пастка для ботів: людина це поле не бачить -->
+            <div class="form__trap" aria-hidden="true">
+                <label for="website">Не заповнюйте це поле</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+
+            <p class="form__status" role="alert" hidden></p>
+            <button class="btn btn--block" type="submit">Відправити</button>
+        </form>
+
+        <div class="modal__success" hidden>
+            <svg class="modal__success-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p>Дякуємо! Ваша заявка успішно відправлена.</p>
+            <p class="modal__success-note">Ми зв'яжемося з вами найближчим часом.</p>
         </div>
     </div>
-</div>
+</dialog>
 </body>
 </html>
