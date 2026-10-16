@@ -64,8 +64,13 @@ export default async (req) => {
     });
 
     if (!response.ok) {
-        console.error('Telegram API error', response.status, await response.text());
-        return json({ ok: false, error: 'telegram' }, 502);
+        const details = await response.text();
+        console.error('Telegram API error', response.status, details);
+        let description = '';
+        try {
+            description = JSON.parse(details).description || '';
+        } catch {}
+        return json({ ok: false, error: `telegram_${response.status}`, description }, 502);
     }
 
     return json({ ok: true });

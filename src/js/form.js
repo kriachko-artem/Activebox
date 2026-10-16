@@ -102,14 +102,18 @@ export function initForm() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),
             });
-            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            if (!response.ok) {
+                const result = await response.json().catch(() => ({}));
+                throw new Error(result.error || `http_${response.status}`);
+            }
 
             form.hidden = true;
             success.hidden = false;
             closeTimer = setTimeout(close, 4000);
         } catch (error) {
             console.error('Не вдалося відправити заявку:', error);
-            status.textContent = 'Не вдалося відправити заявку. Перевірте інтернет і спробуйте ще раз.';
+            const code = error instanceof TypeError ? 'network' : error.message;
+            status.textContent = `Не вдалося відправити заявку. Перевірте інтернет і спробуйте ще раз. (код: ${code})`;
             status.hidden = false;
             submit.disabled = false;
             submit.textContent = 'Відправити';
