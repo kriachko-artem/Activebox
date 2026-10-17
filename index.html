@@ -437,15 +437,19 @@
             <p class="form__status" role="alert" hidden></p>
             <button class="btn btn--block" type="submit">Відправити</button>
         </form>
+    </div>
+</dialog>
 
-        <div class="modal__success" hidden>
-            <svg class="modal__success-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="2"/>
-                <path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <p>Дякуємо! Ваша заявка успішно відправлена.</p>
-            <p class="modal__success-note">Ми зв'яжемося з вами найближчим часом.</p>
-        </div>
+<!-- Підтвердження заявки: закривається лише кнопкою «Гаразд» -->
+<dialog class="modal modal--success" id="success-modal" aria-labelledby="success-title">
+    <div class="modal__content modal__success">
+        <svg class="modal__success-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="modal__success-title" id="success-title">Дякуємо за ваш інтерес до курсу «МІМІКА»!</p>
+        <p class="modal__success-note">З вами зв'яжуться.</p>
+        <button class="btn btn--block" type="button" data-success-ok>Гаразд</button>
     </div>
 </dialog>
 </body>

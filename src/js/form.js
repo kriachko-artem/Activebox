@@ -1,5 +1,7 @@
 // Модальне вікно із заявкою. Дані йдуть на Netlify Function /api/lead,
 // яка вже пересилає їх у Telegram (токен бота зберігається на сервері).
+// Після успішної відправки форма плавно зникає і з'являється вікно
+// підтвердження, яке закривається лише кнопкою «Гаразд».
 
 const ENDPOINT = '/api/lead';
 
@@ -13,12 +15,11 @@ const RULES = {
 export function initForm() {
     const modal = document.getElementById('form-modal');
     const form = document.getElementById('course-form');
-    if (!modal || !form) return;
+    const successModal = document.getElementById('success-modal');
+    if (!modal || !form || !successModal) return;
 
-    const success = modal.querySelector('.modal__success');
     const status = form.querySelector('.form__status');
     const submit = form.querySelector('[type="submit"]');
-    let closeTimer;
 
     const setError = (field, message) => {
         const input = form.elements[field];
@@ -29,28 +30,49 @@ export function initForm() {
     };
 
     const reset = () => {
-        clearTimeout(closeTimer);
         form.reset();
         Object.keys(RULES).forEach((field) => setError(field, ''));
         status.hidden = true;
-        form.hidden = false;
-        success.hidden = true;
         submit.disabled = false;
         submit.textContent = 'Відправити';
+    };
+
+    const lockScroll = (locked) => {
+        document.documentElement.style.overflow = locked ? 'hidden' : '';
     };
 
     const open = (tariff) => {
         reset();
         if (tariff) form.elements.tariff.value = tariff;
         modal.showModal();
-        document.documentElement.style.overflow = 'hidden';
+        lockScroll(true);
     };
 
-    const close = () => modal.close();
+    const close = () => closeAnimated(modal).then(() => lockScroll(false));
 
+    const showSuccess = async () => {
+        await closeAnimated(modal, { keepBackdrop: true });
+        reset();
+        successModal.showModal();
+        lockScroll(true);
+    };
+
+    // Esc у формі — теж плавне закриття
+    modal.addEventListener('cancel', (e) => {
+        e.preventDefault();
+        close();
+    });
     modal.addEventListener('close', () => {
-        document.documentElement.style.overflow = '';
-        clearTimeout(closeTimer);
+        if (!successModal.open) lockScroll(false);
+    });
+
+    const closeSuccess = () => closeAnimated(successModal).then(() => lockScroll(false));
+
+    // Вікно підтвердження не закривається клавішею Esc — лише кнопкою «Гаразд»
+    successModal.addEventListener('cancel', (e) => e.preventDefault());
+    successModal.querySelector('[data-success-ok]').addEventListener('click', closeSuccess);
+    successModal.addEventListener('close', () => {
+        if (!modal.open) lockScroll(false);
     });
 
     document.querySelectorAll('[data-open-form]').forEach((button) => {
@@ -107,9 +129,7 @@ export function initForm() {
                 throw new Error(result.error || `http_${response.status}`);
             }
 
-            form.hidden = true;
-            success.hidden = false;
-            closeTimer = setTimeout(close, 4000);
+            await showSuccess();
         } catch (error) {
             console.error('Не вдалося відправити заявку:', error);
             const code = error instanceof TypeError ? 'network' : error.message;
@@ -118,5 +138,32 @@ export function initForm() {
             submit.disabled = false;
             submit.textContent = 'Відправити';
         }
+    });
+}
+
+// Закриває <dialog> після анімації зникнення (класи .is-closing у CSS)
+function closeAnimated(dialog, { keepBackdrop = false } = {}) {
+    return new Promise((resolve) => {
+        if (!dialog.open) {
+            resolve();
+            return;
+        }
+
+        const finish = () => {
+            clearTimeout(fallback);
+            dialog.removeEventListener('animationend', onEnd);
+            dialog.classList.remove('is-closing', 'keep-backdrop');
+            dialog.close();
+            resolve();
+        };
+        const onEnd = (e) => {
+            if (e.target === dialog) finish();
+        };
+        // Якщо анімація не спрацює (вимкнена в системі тощо) — закриваємо все одно
+        const fallback = setTimeout(finish, 450);
+
+        dialog.addEventListener('animationend', onEnd);
+        dialog.classList.toggle('keep-backdrop', keepBackdrop);
+        dialog.classList.add('is-closing');
     });
 }
